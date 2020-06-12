@@ -63,6 +63,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: config.build.index,
       template: 'index.html',
+      title: env.APP_TITLE.replace(/"/g, ''),
       inject: true,
       minify: {
         removeComments: true,
